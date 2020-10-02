@@ -5,8 +5,6 @@ export const GlobalContext = createContext();
 
 function GlobalState(props) {
 
-    useEffect(() => shuffleAnswers(questions), [])
-
     const shuffleAnswers = (questions) => {
         questions.map(question => {
             return {
@@ -16,7 +14,10 @@ function GlobalState(props) {
         })    
     }
 
+    useEffect(() => shuffleAnswers(questions), [])
+
     const initialState = {
+        currentQuestion: 0,
         questions: questions,
         questionNum: 0,
         totalQuestions: questions.length,
@@ -25,8 +26,34 @@ function GlobalState(props) {
 
     const [state, setState] = useState(initialState);
 
+    const selectAnswer = (event) => {
+        event.persist();
+        setState(prevState => {
+            if (prevState.userAnswers[event.target.value]) {
+                return {
+                    ...prevState,
+                    userAnswers: {
+                        ...prevState.userAnswers,
+                        [event.target.value]: prevState.userAnswers[event.target.value] + 1
+                    }
+                }
+            }
+            return {
+                ...prevState,
+                userAnswers: {
+                    ...prevState.userAnswers,
+                    [event.target.value]: 1
+                }
+            }
+        })
+        console.log(event.target.value);
+    }
+
     return(
-        <GlobalContext.Provider value={state}>
+        <GlobalContext.Provider value={{
+            selectAnswer: selectAnswer,
+            state: state
+        }}>
             {props.children}
         </GlobalContext.Provider>
     )

@@ -15,12 +15,33 @@ function Result(props) {
     }
 
     arr.sort(sortByHighest);
+
+    const result = arr[0][0];
+    let resultImage;
+
+    switch (result) {
+        case "Gryffindor":
+            resultImage = "/Gryffindor.jpg";
+            break;
+        case "Hufflepuff":
+            resultImage = "/Hufflepuff.jpg";
+            break;
+        case "Ravenclaw":
+            resultImage = "/Ravenclaw.jpg";
+            break;
+        case "Slytherin":
+            resultImage = "/Slytherin.jpg";
+            break;
+        default:
+            break;
+    }
     
-    
+    console.log(resultImage);
 
     return(
         <div>
-            You will be a good fit at {arr[0][0]}
+            <p>You will be a good fit at {result}</p>
+            <img src={require('../images' + resultImage)} alt="house-logo"/>
         </div>
     )
 }

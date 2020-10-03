@@ -5,7 +5,7 @@ import QuizContainer from './components/QuizContainer';
 function App() {
   return (
     <GlobalContext>
-      <div className="App">
+      <div className="app">
         <QuizContainer/>
       </div>
     </GlobalContext>

@@ -1,11 +1,15 @@
 import React from 'react';
+import GlobalContext from './components/GlobalState';
 import QuizContainer from './components/QuizContainer';
 
 function App() {
   return (
-    <div className="App">
-      <QuizContainer/>
-    </div>
+    <GlobalContext>
+      <div className="App">
+        <QuizContainer/>
+      </div>
+    </GlobalContext>
+    
   );
 }
 

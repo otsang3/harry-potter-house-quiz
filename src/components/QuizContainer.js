@@ -1,13 +1,25 @@
-import React from 'react';
-import GlobalState from './GlobalState';
+import React, { useContext } from 'react';
 import Quiz from './Quiz';
+import Result from './Result';
+import { GlobalContext } from './GlobalState';
 
 function QuizContainer() {
 
+    const globalContext = useContext(GlobalContext);
+    const { state } = globalContext;
+
+    if (state.currentQuestion > state.totalQuestions) {
+        return(
+            <div>
+                <Result userAnswers={state.userAnswers}/>
+            </div>
+        )
+    }
+
     return(
-        <GlobalState>
+        <div>
             <Quiz/>
-        </GlobalState>
+        </div>
     )
 }
 

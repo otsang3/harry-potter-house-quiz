@@ -17,9 +17,8 @@ function GlobalState(props) {
     useEffect(() => shuffleAnswers(questions), [])
 
     const initialState = {
-        currentQuestion: 0,
+        currentQuestion: 1,
         questions: questions,
-        questionNum: 0,
         totalQuestions: questions.length,
         userAnswers: {}
     }
@@ -32,6 +31,7 @@ function GlobalState(props) {
             if (prevState.userAnswers[event.target.value]) {
                 return {
                     ...prevState,
+                    currentQuestion: prevState.currentQuestion + 1,
                     userAnswers: {
                         ...prevState.userAnswers,
                         [event.target.value]: prevState.userAnswers[event.target.value] + 1
@@ -40,13 +40,13 @@ function GlobalState(props) {
             }
             return {
                 ...prevState,
+                currentQuestion: prevState.currentQuestion + 1,
                 userAnswers: {
                     ...prevState.userAnswers,
                     [event.target.value]: 1
                 }
             }
         })
-        console.log(event.target.value);
     }
 
     return(

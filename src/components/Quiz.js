@@ -22,7 +22,7 @@ function Quiz() {
     }
 
     return(
-        <div>
+        <div className="question-container">
             <h3>{question}</h3>
             {renderAnswers()}
         </div>

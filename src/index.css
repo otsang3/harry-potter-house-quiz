@@ -17,6 +17,26 @@ code {
   background-position: 0% 70%;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
   height: 100vh;
+  align-items: center;
   width: 100vw;
+}
+
+.question-container h3 {
+  margin: 0;
+  margin-bottom: 2em;
+}
+
+.quiz-container {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9 );
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  height: 33%;
+  margin: 0 auto;
+  opacity: 90%;
+  padding: 0em 2em;
+  width: 60%;
 }

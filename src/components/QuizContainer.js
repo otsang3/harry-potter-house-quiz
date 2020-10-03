@@ -10,14 +10,14 @@ function QuizContainer() {
 
     if (state.currentQuestion > state.totalQuestions) {
         return(
-            <div>
+            <div className="quiz-container">
                 <Result userAnswers={state.userAnswers}/>
             </div>
         )
     }
 
     return(
-        <div>
+        <div className="quiz-container">
             <Quiz/>
         </div>
     )

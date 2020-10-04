@@ -39,7 +39,7 @@ function Result(props) {
     return(
         <div className="results-container">
             <img src={require('../images' + resultImage)} alt="house-logo"/>
-            <p>Hmm... You will be a good fit at {result}!</p>
+            <p>Hmm... You will be a good fit in {result}!</p>
         </div>
     )
 }

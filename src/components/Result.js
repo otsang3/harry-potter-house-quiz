@@ -21,16 +21,16 @@ function Result(props) {
 
     switch (result) {
         case "Gryffindor":
-            resultImage = "/Gryffindor.jpg";
+            resultImage = "/Gryffindor.png";
             break;
         case "Hufflepuff":
-            resultImage = "/Hufflepuff.jpg";
+            resultImage = "/Hufflepuff.png";
             break;
         case "Ravenclaw":
-            resultImage = "/Ravenclaw.jpg";
+            resultImage = "/Ravenclaw.png";
             break;
         case "Slytherin":
-            resultImage = "/Slytherin.jpg";
+            resultImage = "/Slytherin.png";
             break;
         default:
             break;
@@ -39,9 +39,9 @@ function Result(props) {
     console.log(resultImage);
 
     return(
-        <div>
-            <p>You will be a good fit at {result}</p>
+        <div className="results-container">
             <img src={require('../images' + resultImage)} alt="house-logo"/>
+            <p>You will be a good fit at {result}</p>
         </div>
     )
 }

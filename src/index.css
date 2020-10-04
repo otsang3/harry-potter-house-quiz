@@ -13,14 +13,20 @@ code {
 }
 
 .app {
+  align-items: center;
   background-image: url('./images/background.jpg');
   background-position: 0% 70%;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   height: 100vh;
-  align-items: center;
   width: 100vw;
+}
+
+.header {
+  margin: 1.5em 0em;
+  width: 60%;
 }
 
 .question-container h3 {
@@ -34,11 +40,15 @@ code {
   border: 1px solid white;
   color: white;
   display: flex;
-  height: 33%;
+  height: 35%;
   margin: 0 auto;
   opacity: 90%;
   padding: 0em 2em;
   width: 60%;
+}
+
+.radio{
+  cursor: pointer;
 }
 
 .results-container {

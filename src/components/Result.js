@@ -35,13 +35,11 @@ function Result(props) {
         default:
             break;
     }
-    
-    console.log(resultImage);
 
     return(
         <div className="results-container">
             <img src={require('../images' + resultImage)} alt="house-logo"/>
-            <p>You will be a good fit at {result}</p>
+            <p>Hmm... You will be a good fit at {result}!</p>
         </div>
     )
 }

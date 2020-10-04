@@ -13,7 +13,13 @@ function Quiz() {
         answers.map((answer, index) => {
             return answersArr.push(
                 <div key={index}>
-                    <input onChange={selectAnswer} checked="" type="radio" name="answer" value={answer.type}/>
+                    <input 
+                    className="radio" 
+                    onChange={selectAnswer} 
+                    checked="" type="radio" 
+                    name="answer" 
+                    value={answer.type}
+                    />
                     <label>{answer.content}</label>
                 </div>
             )

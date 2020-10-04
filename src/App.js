@@ -6,6 +6,7 @@ function App() {
   return (
     <GlobalContext>
       <div className="app">
+        <img className="header" src={require('./images/header.png')}/>
         <QuizContainer/>
       </div>
     </GlobalContext>

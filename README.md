@@ -1,6 +1,7 @@
 DEMO App: [https://harry-potter-house-quiz.herokuapp.com/](https://harry-potter-house-quiz.herokuapp.com/)
 
 ![demo app screenshot](./src/images/screenshot.png)
+![demo app screenshot](./src/images/screenshot2.png)
 
 ## Available Scripts
 

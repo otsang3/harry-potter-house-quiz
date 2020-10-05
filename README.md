@@ -1,4 +1,4 @@
-DEMO App: [https://harry-potter-house-quiz.herokuapp.com/](https://harry-potter-house-quiz.herokuapp.com/.com)
+DEMO App: [https://harry-potter-house-quiz.herokuapp.com/](https://harry-potter-house-quiz.herokuapp.com/)
 
 ![demo app screenshot](./src/images/screenshot.png)
 

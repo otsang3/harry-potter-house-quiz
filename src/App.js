@@ -4,12 +4,12 @@ import QuizContainer from './components/QuizContainer';
 
 function App() {
   return (
-    <GlobalContext>
-      <div className="app">
+    <div className="app">
+      <GlobalContext>
         <img className="header" src={require('./images/header.png')}/>
         <QuizContainer/>
-      </div>
-    </GlobalContext>
+      </GlobalContext>
+    </div>
     
   );
 }

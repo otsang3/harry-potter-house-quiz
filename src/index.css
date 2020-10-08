@@ -34,6 +34,12 @@ code {
   margin-bottom: 1.8em;
 }
 
+.question-container p {
+  margin: 0em;
+  margin-bottom: 1em;
+  padding: 0em;
+}
+
 .quiz-container {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.9 );

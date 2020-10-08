@@ -29,6 +29,7 @@ function Quiz() {
 
     return(
         <div className="question-container">
+            <p>Question {state.currentQuestion} of {state.totalQuestions}</p>
             <h3>{question}</h3>
             {renderAnswers()}
         </div>
